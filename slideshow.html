@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        #slideshow-container {
+            max-width: 600px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+
+        button {
+            cursor: pointer;
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="slideshow-container">
+    <div class="mySlides">
+        <img src="https://imgs.search.brave.com/3DwRx0cX3VkQsLs9Bpg4qLGpa44g8o-siVmfCJj-cYU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vcGljanVt/Ym8uY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9iZWF1dGlmdWwt/Z3JlZW4tZmllbGQt/c2NlbmVyeS1mcmVl/LXBob3RvLmpwZz93/PTYwMCZxdWFsaXR5/PTgw" alt="Image 1">
+    </div>
+    <div class="mySlides">
+        <img src="https://imgs.search.brave.com/m6c5--Ysnn2STP_NPo-zuEBPPsjQ0sR0ugjaTojO-k4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vcGljanVt/Ym8uY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9iZWF1dGlmdWwt/YXV0dW1uLW5hdHVy/ZS1jb2xvcnMtZHVy/aW5nLXN1bnNldC1m/cmVlLXBob3RvLmpw/Zz93PTYwMCZxdWFs/aXR5PTgw" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://imgs.search.brave.com/b2-g9rpapugXeyuJChSCpI0SUaoIydG_igcWLGELZOI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ4/MjYxMDMwMC9waG90/by9jb3NtZXRpYy1z/bWVhcnMtY3JlYW0t/dGV4dHVyZS1vbi1i/ZWlnZS1iYWNrZ3Jv/dW5kLndlYnA_Yj0x/JnM9MTcwNjY3YSZ3/PTAmaz0yMCZjPXRR/S0VEbWlzZFdUaGhN/dDRBeVkzbTh6Mzc4/LUNydC1ueVZ6dWR5/a3k5blk9" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://imgs.search.brave.com/jZN5-oEvRMNs7QPOF6LfXfxzttGQHx4jJ_qULCNioh0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQw/NTAzOTY1OC9waG90/by9zdGFjay1vZi12/YXJpb3VzLWNvbnN0/cnVjdGlvbi1zYW1w/bGUtd29vZC1ib2Fy/ZHMud2VicD9iPTEm/cz0xNzA2NjdhJnc9/MCZrPTIwJmM9dVJr/NHFNQnZoTUJPWUI2/ZGpRNGlaM2dKUFRR/dzJuMmZrQWctNWFs/MEVvWT0" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://imgs.search.brave.com/dLxFjtmMS9Iexb1C4tNRJPY-y2EvRjUF4J45I84Q3j4/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQz/NjQyNjQ0Ni9waG90/by93aGl0ZS1jb3Nt/ZXRpYy1jcmVhbS1z/YW1wbGUud2VicD9i/PTEmcz0xNzA2Njdh/Jnc9MCZrPTIwJmM9/MFZkbExfOTl3Z1pq/UUhGU3pUb1VCRXRH/RjBhWXFxYXVLU01n/UHUxdVgxOD0" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://imgs.search.brave.com/S2sjlq0a46U6YQxpSnaavGlP8LGVbI8L0ySh9wXS6OY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NzkzNTM5Nzc4Mjgt/MmE0ZWFiNTQwYjlh/P3E9ODAmdz0xMDAw/JmF1dG89Zm9ybWF0/JmZpdD1jcm9wJml4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4TW54OGMy/RnRjR3hsZkdWdWZE/QjhmREI4Zkh3dw" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://imgs.search.brave.com/A-Dws6tonb8R_Jd_EO9Q67YcRGDjH507-Z_GQ9pW_So/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/bWF4LzE0MDAvMSpE/bWh3SFQ0NHhXdUNZ/cU5sOEgwNVFRLmpw/ZWc" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://imgs.search.brave.com/xjEleRPwTsW1MpUfUlUfeJQ8qYtzdVzH20gSVlAWL1s/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/emRuZXQuY29tL2Ev/aW1nL3Jlc2l6ZS84/YzRiZTkxMmMwNGFh/OTJmZmJlNWY2NzQ5/YmYwOGZjOGI2NDI4/YWU5LzIwMTkvMDkv/MDUvMjQ3MjVjY2Qt/Njk2YS00NDBjLTky/MWMtOTllYzQ2ZTAx/N2M4L3JvbWFpbi12/aWduZXMteXdxYTlp/emItZHUtdW5zcGxh/c2guanBnP2F1dG89/d2VicCZ3aWR0aD0x/Mjgw" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://imgs.search.brave.com/K-louFXlPob5VNbnhdUzoFmIgEB5FqIXHLPViHI95UM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zcC1h/by5zaG9ydHBpeGVs/LmFpL2NsaWVudC90/b193ZWJwLHFfZ2xv/c3N5LHJldF9pbWcs/d184MDAsaF81Mzgv/aHR0cHM6Ly9ibG9n/LnNuYXBwYS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjIv/MDIvRnJlZXN0b2Nr/cy5qcGc" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://imgs.search.brave.com/XdQLmlGl66DrDvLN2p0yWzJLhFZYRACFOksVR612LmU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzc1LzQ2/LzNkLzc1NDYzZDRk/MmY5YmRmMGRjOTg3/NzVjNTkxNGFkNmMz/LmpwZw" alt="Image 2">
+    </div>
+
+    <button id="toggleBtn" onclick="toggleSlideshow()">Start/Stop</button>
+    <button onclick="plusSlides(-1)">Previous</button>
+    <button onclick="plusSlides(1)">Next</button>
+</div>
+
+<script>
+    let slideIndex = 0;
+    let slideshowInterval;
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+    function toggleSlideshow() {
+        if (slideshowInterval) {
+            clearInterval(slideshowInterval);
+            slideshowInterval = null;
+        } else {
+            slideshowInterval = setInterval(showSlides, 2000); // Change slide every 2 seconds
+        }
+    }
+
+    function plusSlides(n) {
+        clearInterval(slideshowInterval);
+        slideshowInterval = null;
+        showSlides(slideIndex += n);
+    }
+
+    // Start slideshow initially
+    toggleSlideshow();
+</script>
+
+</body>
+</html>

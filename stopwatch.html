@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #display {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      font-size: 1em;
+      margin: 5px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="display">00:00:00</div>
+<button id="startBtn">Start</button>
+<button id="pauseBtn">Pause</button>
+<button id="resetBtn">Reset</button>
+
+<script>
+  let isRunning = false;
+  let seconds = 0;
+  let interval;
+
+  const display = document.getElementById("display");
+
+  function updateDisplay() {
+    const formattedTime = new Date(seconds * 1000).toISOString().substr(11, 8);
+    display.textContent = formattedTime;
+  }
+
+  function startStopwatch() {
+    if (!isRunning) {
+      isRunning = true;
+      interval = setInterval(() => {
+        seconds++;
+        updateDisplay();
+      }, 1000);
+    }
+  }
+
+  function pauseStopwatch() {
+    if (isRunning) {
+      isRunning = false;
+      clearInterval(interval);
+    }
+  }
+
+  function resetStopwatch() {
+    isRunning = false;
+    clearInterval(interval);
+    seconds = 0;
+    updateDisplay();
+  }
+
+  document.getElementById("startBtn").addEventListener("click", startStopwatch);
+  document.getElementById("pauseBtn").addEventListener("click", pauseStopwatch);
+  document.getElementById("resetBtn").addEventListener("click", resetStopwatch);
+</script>
+
+</body>
+</html>
